@@ -55,22 +55,13 @@ const authController = {
                 if (!error && response.statusCode === 200) {
                     const access_token = body.access_token;
                     const refresh_token = body.refresh_token;
-
-                    const options = {
-                        url: 'https://api.spotify.com/v1',
-                        headers: { Authorization: 'Bearer ' + access_token },
-                        json: true,
-                    };
-
-                    request.get(options, async (error, response, body) => {
-                        res.redirect(
-                            `${redirect_client}/?` +
-                            querystring.stringify({
-                                token: access_token,
-                                refresh_token: refresh_token,
-                            })
-                        );
-                    });
+            
+                    res.redirect(
+                        `${redirect_client}/?${querystring.stringify({
+                            access_token,
+                            refresh_token,
+                          })}`
+                    );
                 } else {
                     res.redirect('/#' +
                         querystring.stringify({
@@ -81,6 +72,7 @@ const authController = {
             });
         }
     },
+
 
     refreshToken: (req, res) => {
         const refresh_token = req.query.refresh_token;
@@ -105,7 +97,7 @@ const authController = {
                 });
             }
         });
-    }
+    },
 };
 
 module.exports = authController;
