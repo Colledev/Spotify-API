@@ -33,7 +33,7 @@ _Insert screenshots or screencasts here to illustrate the authentication process
 
 ## Setup
 
-1. Register a Spotify App and add http://localhost:8888/callback as a Redirect URI in the app settings
+1. Register a Spotify App and add http://localhost:5000/callback as a Redirect URI in the app settings
 2. Create an .env file in the root of the project based on .env.example
 3. npm install in Client & server
 4. npm start client % server
