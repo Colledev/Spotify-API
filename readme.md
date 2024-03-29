@@ -1,4 +1,4 @@
-# Project Name
+   # Spotify API
 
 This is an ongoing project focusing on authentication using the Spotify API to fetch user data such as playlists, profile, and playlist recommendations. The application uses React.js for the frontend and Node.js for the backend. The main goal is to allow users to authenticate with their Spotify accounts, accessing and interacting with their profile and playlist information.
 
