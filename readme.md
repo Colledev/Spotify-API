@@ -72,6 +72,13 @@ _Insert screenshots or screencasts here to illustrate the authentication process
    node index.js                                        //http://localhost:5000
    ```
 
+## SCREENSHOTS
+
+How it was going (April 5th, 2024)
+
+![Imagem do WhatsApp de 2024-04-05 à(s) 22 53 01_f71c90ca](https://github.com/Colledev/Spotify-API/assets/112740912/34818632-d2ae-4711-a2ca-98dae174e74f)
+
+
 ## License
 
 - MIT
