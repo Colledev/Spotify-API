@@ -15,7 +15,7 @@ const authController = {
         const state = generateRandomString(16);
         res.cookie(stateKey, state)
 
-        const scope = 'streaming user-read-email user-read-private user-library-read user-library-modify user-read-playback-state user-modify-playback-state';
+        const scope = 'streaming user-read-email user-read-private user-library-read user-library-modify user-read-playback-state user-modify-playback-state user-modify-playback-state user-read-currently-playing user-read-recently-played';
         res.redirect('https://accounts.spotify.com/authorize?' +
             querystring.stringify({
                 response_type: 'code',
