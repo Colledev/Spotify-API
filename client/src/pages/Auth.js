@@ -8,18 +8,18 @@ const Auth = () => {
 
     useEffect(() => {
         const queryParams = getQueryParams(location.search);
-        console.log('Query Params:', queryParams); // Passo 1: Verificar se os tokens estão sendo extraídos corretamente
+        console.log('Query Params:', queryParams); 
 
         const { access_token, refresh_token } = queryParams;
 
         if (access_token) {
             storeTokenLocally(access_token, refresh_token);
-            console.log('Tokens armazenados localmente:', access_token, refresh_token); // Passo 2: Verificar se os tokens estão sendo armazenados corretamente
+            console.log('Tokens armazenados localmente:', access_token, refresh_token); 
             navigate('/home'); 
-            console.log('Redirecting to /home'); // Passo 3: Verificar se o redirecionamento está ocorrendo corretamente
+            console.log('Redirecting to /home'); 
         } else {
             navigate('/');
-            console.log('Redirecting to /'); // Passo 3: Verificar se o redirecionamento está ocorrendo corretamente
+            console.log('Redirecting to /'); 
         }
     }, [location, navigate]); 
 
