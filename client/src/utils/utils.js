@@ -21,6 +21,8 @@ export const storeTokenLocally = (accessToken, refreshToken) => {
     localStorage.setItem('refreshToken', refreshToken);
 };
 
-export const retrieveTokenLocally = () => {
-    return localStorage.getItem('accessToken');
+export const getTokenFromLocalStorage = () => {
+    const accessToken = localStorage.getItem('accessToken');
+    const refreshToken = localStorage.getItem('refreshToken');
+    return { accessToken, refreshToken };
 };

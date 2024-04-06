@@ -1,13 +1,15 @@
 import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
-import SongTrack from "../components/SongTrack";
+import Player from "../components/Player";
 
 const Home = () => {
     return (
+        
+
         <div className="bg-neutral-800 h-screen">
             <Header />
             <Sidebar />
-            <SongTrack />
+            <Player />
         </div>
     );
 };
